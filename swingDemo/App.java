@@ -1,6 +1,9 @@
 package swingDemo;
-public class App {
+public class App implements Runnable{
 	public static void main(String[] args) {
-		MainSwing mainSwing = new MainSwing();
+		Thread th = new Thread(()->{
+			MainSwing mainSwing = new MainSwing();
+		});
+		th.start();
 	}
 }
