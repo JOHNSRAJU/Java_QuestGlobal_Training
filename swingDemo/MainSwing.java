@@ -1,8 +1,6 @@
 package swingDemo;
 
 import java.awt.BorderLayout;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
 
 import javax.swing.JButton;
 import javax.swing.JFrame;
@@ -21,14 +19,14 @@ public class MainSwing extends JFrame{
 		add(textPanel,BorderLayout.CENTER);
 		
 		bar = new MenuBar();
-		bar.setTextArea(textPanel.area);
+		bar.setTextArea(textPanel.getArea());
 		add(bar,BorderLayout.NORTH);
 		setVisible(true);
 		
 		clear = new JButton("Clear");
 		add(clear,BorderLayout.SOUTH);
 		clear.addActionListener((e)->{
-			textPanel.area.setText("");
+			textPanel.getArea().setText("");
 		});
 	}
 }
